@@ -1,0 +1,35 @@
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.5;
+  text-align: center;
+  margin: 0;
+  padding: 20px;
+  color: #111;
+}
+
+.intro {
+  max-width: 700px;
+  margin: 0 auto 2rem;
+  font-size: 1rem;
+}
+
+.categories {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 2rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.category img {
+  width: 80px;
+  height: auto;
+  margin-bottom: 0.5rem;
+}
+
+.category img:hover {
+  width: 90px;
+  height: auto;
+  margin-bottom: 0.5rem;
+  cursor: pointer;
+}

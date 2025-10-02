@@ -29,3 +29,29 @@ function updateCartCount() {
 
 // ✅ run once on page load to show current count
 document.addEventListener("DOMContentLoaded", updateCartCount);
+
+
+import { getParam } from './utils.mjs';
+const productId = getParam('product'); // returns "880RR"
+
+
+document.addEventListener("DOMContentLoaded", () => {
+  const priceElement = document.getElementById("productPrice");
+  const discountElement = document.querySelector(".product-card__discount");
+  const discountedPriceElement = document.getElementById("discountedPrice");
+
+  if (priceElement && discountElement && discountedPriceElement) {
+    const originalPrice = parseFloat(priceElement.dataset.price);
+    const discount = parseInt(discountElement.dataset.discount, 10);
+
+    // Calculate discounted price
+    const finalPrice = (originalPrice * (1 - discount / 100)).toFixed(2);
+
+    // Update the DOM
+    priceElement.innerHTML = `
+      <span class="product-card__price--old">Original $${originalPrice.toFixed(2)}</span>
+    `;
+    discountedPriceElement.textContent = `Discounted  $${finalPrice}`;
+  }
+});
+

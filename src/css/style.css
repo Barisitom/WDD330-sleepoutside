@@ -254,6 +254,47 @@ button {
   grid-column: 3;
 }
 
+.product-card__discount {
+  display: inline-block;
+  background: #e63946;
+  color: #fff;
+  font-weight: bold;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  position: absolute;
+  top: 8px;
+  right: 8px;
+}
+.product-card {
+  position: relative; /* to position badge absolutely */
+}
+
+/* category CSS styles */
+.categories {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 2rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.category img {
+  width: 80px;
+  height: auto;
+  margin-bottom: 0.5rem;
+}
+
+.category img:hover {
+  width: 90px;
+  height: auto;
+  margin-bottom: 0.5rem;
+  cursor: pointer;
+}
+
+
+
+
 @media screen and (min-width: 500px) {
   body {
     max-width: 1080px;
