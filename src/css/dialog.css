@@ -1,0 +1,85 @@
+/*  Dialog Styling */
+dialog {
+  border: none;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  background: #fff;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.25);
+  width: 90%;
+  max-width: 500px;
+  text-align: center;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+dialog::backdrop {
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(3px);
+}
+
+/* Close Button */
+dialog .close {
+  position: absolute;
+  top: 0.6rem;
+  right: 0.8rem;
+  background: #e63946;
+  color: white;
+  border: none;
+  border-radius: 70%;
+  width: 0.2rem;
+  height: 2.5rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+dialog .close:hover {
+  background: #e4838d;
+}
+
+/* Product Image */
+dialog img {
+  width: 100%;
+  border-radius: 0.6rem;
+  margin-bottom: 1rem;
+}
+
+/* Product Title & Description */
+dialog h2 {
+  font-size: 1.25rem;
+  color: #1a1a1a;
+  margin-bottom: 0.5rem;
+}
+
+dialog p {
+  color: #444;
+  margin: 0.5rem 0;
+  line-height: 1.4;
+}
+
+/* Add to Cart Button */
+dialog .product-detail__add button {
+  background: #007b5f;
+  color: #fff;
+  padding: 0.7rem 1.2rem;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background 0.2s ease;
+}
+
+dialog .product-detail__add button:hover {
+  background: #11241f;
+}
+
+/* ✨ Fade-in Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
