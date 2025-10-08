@@ -12,15 +12,15 @@ export default class ProductDetails {
     // then render HTML
     this.renderProductDetails();
     // set up the Add to Cart button
-    document.getElementById('addToCart')
-      .addEventListener('click', this.addProductToCart.bind(this));
+    document.getElementById("addToCart")
+      .addEventListener("click", this.addProductToCart.bind(this));
   }
 
   addProductToCart() {
     // Example: store product in localStorage
-    let cart = JSON.parse(localStorage.getItem('so-cart')) || [];
+    let cart = JSON.parse(localStorage.getItem("so-cart")) || [];
     cart.push(this.product);
-    localStorage.setItem('so-cart', JSON.stringify(cart));
+    localStorage.setItem("so-cart", JSON.stringify(cart));
     alert(`${this.product.Name} added to cart`);
   }
 
@@ -39,7 +39,7 @@ renderProductDetails(product) {
   }
   productContainer.innerHTML = `
     <h2>${product.Name}</h2>
-    <p>Price: <span class="original-price" style="text-decoration: ${product.discount ? 'line-through' : 'none'}">$${product.Price}</span>
+    <p>Price: <span class="original-price" style="text-decoration: ${product.discount ? "line-through" : "none"}">$${product.Price}</span>
       ${product.discount ? `<span class="discounted-price">$${(product.Price * (1 - product.discount)).toFixed(2)}</span>` : ""}
     </p>
     ${discountHtml}

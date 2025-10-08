@@ -35,9 +35,7 @@ function updateCartFooter(cartItems) {
 
   if (cartItems.length > 0) {
     cartFooter.classList.remove("hide");
-    const total = cartItems.reduce((sum, item) => {
-      return sum + (item.FinalPrice || item.price || 0);
-    }, 0);
+    const total = cartItems.reduce((sum, item) => sum + (item.FinalPrice || item.price || 0), 0);
     cartTotalEl.textContent = `Total: $${total.toFixed(2)}`;
   } else {
     cartFooter.classList.add("hide");

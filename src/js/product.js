@@ -31,8 +31,6 @@ function updateCartCount() {
 document.addEventListener("DOMContentLoaded", updateCartCount);
 
 
-import { getParam } from './utils.mjs';
-const productId = getParam('product'); // returns "880RR"
 
 
 document.addEventListener("DOMContentLoaded", () => {
